@@ -14,11 +14,11 @@
 <meta property="og:title" content="AyCE Ingeniería — Ingeniería eléctrica y automatización en Santa Fe">
 <meta property="og:description" content="Tableros, instalaciones y automatización industrial en Santa Fe. 45 años de oficio, con las herramientas de hoy.">
 <meta property="og:url" content="https://ayceingenieria.com.ar/">
-<meta property="og:image" content="https://ayceingenieria.com.ar/fotos/chiller-04.jpg">
+<meta property="og:image" content="https://ayceingenieria.com.ar/fotos/tableros-ayce.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="AyCE Ingeniería — Ingeniería eléctrica y automatización en Santa Fe">
 <meta name="twitter:description" content="Tableros, instalaciones y automatización industrial en Santa Fe.">
-<meta name="twitter:image" content="https://ayceingenieria.com.ar/fotos/chiller-04.jpg">
+<meta name="twitter:image" content="https://ayceingenieria.com.ar/fotos/tableros-ayce.jpg">
 
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
@@ -110,11 +110,10 @@ header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.9);backdrop
 .hist-img{aspect-ratio:4/5}
 
 /* carrusel de historia */
-.hist-carousel{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;border:1px solid #E2E5EA;box-shadow:0 30px 60px -30px rgba(16,24,40,.35);background:#EEF0F3}
+.hist-carousel{position:relative;aspect-ratio:4/5;border-radius:10px;overflow:hidden;border:1px solid #E2E5EA;box-shadow:0 30px 60px -30px rgba(16,24,40,.35);background:#EEF0F3}
 .hist-track{display:flex;width:100%;height:100%;transition:transform .55s cubic-bezier(.4,0,.2,1)}
 .hist-slide{flex:0 0 100%;height:100%;margin:0}
 .hist-slide img{width:100%;height:100%;object-fit:cover;display:block}
-.hist-slide.vertical img{object-position:center 50%}
 .hist-arrow{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;border:none;background:rgba(10,16,32,.45);color:#fff;font-size:20px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:2}
 .hist-arrow:hover{background:rgba(10,16,32,.7)}
 .hist-arrow.prev{left:12px}
@@ -164,6 +163,25 @@ figcaption{padding:15px 16px 16px;display:flex;flex-direction:column;gap:11px;fl
 figcaption p{font-size:14px;line-height:1.45;color:var(--texto);flex:1}
 .tags{display:flex;flex-wrap:wrap;gap:6px}
 .tag{font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--azul);background:var(--azul-claro);border-radius:5px;padding:3px 8px}
+/* trabajos — tarjetas que se dan vuelta */
+.flip-grid{margin-top:clamp(36px,5vw,56px);display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.flip-card{aspect-ratio:4/3;perspective:1200px}
+.flip-inner{position:relative;width:100%;height:100%;text-align:left;transition:transform .6s cubic-bezier(.4,0,.2,1);transform-style:preserve-3d;border-radius:14px}
+.flip-card:hover .flip-inner,.flip-card:focus-within .flip-inner{transform:rotateY(180deg)}
+.flip-front,.flip-back{position:absolute;inset:0;-webkit-backface-visibility:hidden;backface-visibility:hidden;border-radius:14px;overflow:hidden;border:1px solid var(--linea)}
+.flip-front img{width:100%;height:100%;object-fit:cover;display:block}
+.flip-front .flip-tag{position:absolute;left:12px;bottom:12px;background:rgba(10,16,32,.72);color:#fff;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 10px;border-radius:6px}
+.flip-back{transform:rotateY(180deg);background:var(--azul);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:clamp(18px,3vw,28px)}
+.flip-back h3{font-size:1.05rem;line-height:1.3;font-weight:700;letter-spacing:-.01em}
+.flip-back p{margin-top:10px;font-size:13.5px;line-height:1.5;color:#DCE5F7}
+@media(max-width:860px){.flip-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.flip-grid{grid-template-columns:1fr}.flip-card{aspect-ratio:16/11}}
+@media(prefers-reduced-motion:reduce){
+  .flip-card{aspect-ratio:auto;perspective:none}
+  .flip-inner{position:static;transition:none;transform:none!important}
+  .flip-front{position:static;aspect-ratio:4/3}
+  .flip-back{position:static;transform:none;margin-top:10px}
+}
 
 /* banda */
 .banda{position:relative;height:clamp(320px,50vw,660px);overflow:hidden;isolation:isolate}
@@ -354,8 +372,9 @@ footer img.f-logo{height:48px;width:auto}
             <figure class="hist-slide"><img src="fotos_historia/historia-01.jpg" loading="lazy" alt="Sala de máquinas industrial con compresores y tableros, foto de archivo de AyCE Ingeniería"></figure>
             <figure class="hist-slide"><img src="fotos_historia/historia-02.jpg" loading="lazy" alt="Detalle de compresor industrial con tablero de instrumentos, foto de archivo de AyCE Ingeniería"></figure>
             <figure class="hist-slide"><img src="fotos_historia/historia-03.jpg" loading="lazy" alt="Puesta en marcha de un sistema con controlador y computadora, foto de archivo de AyCE Ingeniería"></figure>
+            <figure class="hist-slide"><img src="fotos_historia/historia-04.jpg" loading="lazy" alt="Programación de un sistema de control, foto de archivo de AyCE Ingeniería"></figure>
             <figure class="hist-slide"><img src="fotos_historia/historia-05.jpg" loading="lazy" alt="Oficina de dibujo técnico con planos y equipo de trabajo, foto de archivo de AyCE Ingeniería"></figure>
-            <figure class="hist-slide vertical"><img src="fotos_historia/historia-06.jpg" loading="lazy" alt="Trabajo en planta con computadora portátil, foto de archivo de AyCE Ingeniería"></figure>
+            <figure class="hist-slide"><img src="fotos_historia/historia-06.jpg" loading="lazy" alt="Trabajo en planta con computadora portátil, foto de archivo de AyCE Ingeniería"></figure>
           </div>
           <button class="hist-arrow prev" type="button" id="histPrev" aria-label="Foto anterior">‹</button>
           <button class="hist-arrow next" type="button" id="histNext" aria-label="Foto siguiente">›</button>
@@ -366,52 +385,95 @@ footer img.f-logo{height:48px;width:auto}
     </div>
   </section>
 
-  <section id="trabajos" class="pad" style="overflow:hidden">
+  <section id="trabajos" class="pad">
     <div class="wrap">
       <div data-reveal style="max-width:760px">
         <p class="eyebrow">03 — Trabajos realizados</p>
         <h2>Trabajos realizados.</h2>
-        <p class="lede">Un mismo trabajo puede pertenecer a varias etiquetas: diseñamos y armamos el tablero, lo montamos en planta y lo ponemos en marcha. Filtrá por etiqueta para verlos.</p>
+        <p class="lede">Una selección de trabajos junto a distintas empresas. Pasá el cursor sobre cada imagen para ver de qué se trata.</p>
       </div>
-      <div data-reveal style="margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
-        <div class="chips" role="group" aria-label="Filtrar trabajos por etiqueta">
-          <button class="chip" type="button" data-f="Todos" aria-pressed="true">Todos</button>
-          <button class="chip" type="button" data-f="Tableros" aria-pressed="false">Tableros</button>
-          <button class="chip" type="button" data-f="Montajes" aria-pressed="false">Montajes</button>
-          <button class="chip" type="button" data-f="Automatización" aria-pressed="false">Automatización</button>
+      <div class="flip-grid">
+        <div class="flip-card" data-reveal tabindex="0">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="fotos/vfm-set-curupayti.jpg" loading="lazy" alt="Subestación transformadora 33/13,2 kV Curupaytí, obra junto a VFM">
+              <span class="flip-tag">VFM</span>
+            </div>
+            <div class="flip-back">
+              <h3>VFM — S.E.T. 33/13,2 kV Curupaytí</h3>
+              <p>Trabajamos junto a VFM en el armado, conexionado y puesta en marcha de tableros de comando, medición y protección, y de servicios auxiliares.</p>
+            </div>
+          </div>
         </div>
-        <div class="arrows">
-          <button class="arrow" type="button" id="prev" aria-label="Ver trabajos anteriores">‹</button>
-          <button class="arrow" type="button" id="next" aria-label="Ver más trabajos">›</button>
+        <div class="flip-card" data-reveal tabindex="0">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="fotos/tableros-ayce.jpg" loading="lazy" alt="Tableros eléctricos diseñados y armados por AyCE Ingeniería">
+              <span class="flip-tag">AyCE</span>
+            </div>
+            <div class="flip-back">
+              <h3>Tableros AyCE</h3>
+              <p>Tableros diseñados, armados y ejecutados con una mirada técnica, ordenada y responsable.</p>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card" data-reveal tabindex="0">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="fotos/nateco-tanques-silos.jpg" loading="lazy" alt="Tablero de control y maniobra de tanques y silos, obra junto a Nateco">
+              <span class="flip-tag">Nateco</span>
+            </div>
+            <div class="flip-back">
+              <h3>NATECO — Tanques / silos</h3>
+              <p>Diseño, armado y conexionado de tablero para el control y maniobra de equipos en tanques silos, integrando protecciones, señalización y elementos de comando.</p>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card" data-reveal tabindex="0">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="fotos/ovoalfa-factor-potencia.jpg" loading="lazy" alt="Tablero de corrección del factor de potencia, obra junto a Ovoalfa">
+              <span class="flip-tag">Ovoalfa</span>
+            </div>
+            <div class="flip-back">
+              <h3>OVOALFA — Corrección del factor de potencia</h3>
+              <p>Diagnóstico de la instalación y adecuación del sistema de compensación de energía reactiva, con el objetivo de mejorar el factor de potencia y optimizar el funcionamiento de la instalación eléctrica.</p>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card" data-reveal tabindex="0">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="fotos/simes-arrancador-suave.jpg" loading="lazy" alt="Tablero con arrancador suave para motores, obra junto a Simes">
+              <span class="flip-tag">Simes</span>
+            </div>
+            <div class="flip-back">
+              <h3>SIMES — Arrancador suave</h3>
+              <p>Diseño, armado y conexionado de tablero para el comando y protección de motores, incorporando arrancador suave para optimizar el arranque y reducir los esfuerzos sobre la instalación.</p>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card" data-reveal tabindex="0">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="fotos/asema-transformador.jpg" loading="lazy" alt="Transformador de ingreso a planta, obra junto a Asema">
+              <span class="flip-tag">Asema</span>
+            </div>
+            <div class="flip-back">
+              <h3>ASEMA — Transformador de ingreso</h3>
+              <p>Cálculo, proyección y dimensionamiento del transformador de ingreso a planta, considerando las necesidades de potencia y las condiciones de operación de la instalación.</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="track" id="track">
-        <figure data-tags="Tableros,Automatización"><img src="fotos/chiller-01.jpg" loading="lazy" width="1200" height="1600" alt="Interior de tablero de comando con control de temperatura y compresores"><figcaption><p>Interior de tablero de comando — control de temperatura y compresores</p><div class="tags"><span class="tag">Tableros</span><span class="tag">Automatización</span></div></figcaption></figure>
-        <figure data-tags="Tableros,Automatización"><img src="fotos/automatizacion-03.jpg" loading="lazy" width="900" height="1600" alt="Tablero con variadores de velocidad"><figcaption><p>Tablero con variadores de velocidad</p><div class="tags"><span class="tag">Tableros</span><span class="tag">Automatización</span></div></figcaption></figure>
-        <figure data-tags="Tableros,Montajes"><img src="fotos/planta-04.jpg" loading="lazy" width="924" height="1280" alt="Tablero de comando instalado"><figcaption><p>Tablero de comando instalado</p><div class="tags"><span class="tag">Tableros</span><span class="tag">Montajes</span></div></figcaption></figure>
-        <figure data-tags="Tableros,Automatización"><img src="fotos/chiller-04.jpg" loading="lazy" width="1200" height="1600" alt="Panel frontal de comando y señalización"><figcaption><p>Panel frontal de comando y señalización</p><div class="tags"><span class="tag">Tableros</span><span class="tag">Automatización</span></div></figcaption></figure>
-        <figure data-tags="Tableros,Montajes"><img src="fotos/planta-01.jpg" loading="lazy" width="960" height="1280" alt="Tablero de potencia, vista interior"><figcaption><p>Tablero de potencia — vista interior</p><div class="tags"><span class="tag">Tableros</span><span class="tag">Montajes</span></div></figcaption></figure>
-        <figure data-tags="Tableros,Automatización"><img src="fotos/automatizacion-01.jpg" loading="lazy" width="1200" height="1600" alt="Guardamotores y contactores"><figcaption><p>Guardamotores y contactores</p><div class="tags"><span class="tag">Tableros</span><span class="tag">Automatización</span></div></figcaption></figure>
-        <figure data-tags="Tableros,Automatización"><img src="fotos/chiller-03.jpg" loading="lazy" width="1200" height="1600" alt="Módulos de control e instrumentación"><figcaption><p>Módulos de control e instrumentación</p><div class="tags"><span class="tag">Tableros</span><span class="tag">Automatización</span></div></figcaption></figure>
-        <figure data-tags="Tableros,Montajes"><img src="fotos/planta-02.jpg" loading="lazy" width="960" height="1280" alt="Tablero de comando con módulos de control"><figcaption><p>Tablero de comando con módulos de control</p><div class="tags"><span class="tag">Tableros</span><span class="tag">Montajes</span></div></figcaption></figure>
-        <figure data-tags="Tableros,Automatización"><img src="fotos/automatizacion-04.jpg" loading="lazy" width="1200" height="1600" alt="Panel frontal con botonera de comando"><figcaption><p>Panel frontal — botonera de comando</p><div class="tags"><span class="tag">Tableros</span><span class="tag">Automatización</span></div></figcaption></figure>
-        <figure data-tags="Tableros,Montajes"><img src="fotos/planta-06.jpg" loading="lazy" width="942" height="1280" alt="Tablero de conexionado con cableado identificado"><figcaption><p>Tablero de conexionado — cableado identificado</p><div class="tags"><span class="tag">Tableros</span><span class="tag">Montajes</span></div></figcaption></figure>
-        <figure data-tags="Tableros"><img src="fotos/chiller-02.jpg" loading="lazy" width="1200" height="1600" alt="Borneras y cableado identificado"><figcaption><p>Borneras y cableado identificado</p><div class="tags"><span class="tag">Tableros</span></div></figcaption></figure>
-        <figure data-tags="Tableros,Automatización"><img src="fotos/automatizacion-05.jpg" loading="lazy" width="1200" height="1600" alt="Arrancadores suaves y protecciones"><figcaption><p>Arrancadores suaves y protecciones</p><div class="tags"><span class="tag">Tableros</span><span class="tag">Automatización</span></div></figcaption></figure>
-        <figure data-tags="Montajes,Automatización"><img src="fotos/planta-03.jpg" loading="lazy" width="960" height="1280" alt="Instrumentación montada en planta"><figcaption><p>Instrumentación montada en planta</p><div class="tags"><span class="tag">Montajes</span><span class="tag">Automatización</span></div></figcaption></figure>
-        <figure data-tags="Montajes,Automatización"><img src="fotos/planta-05.jpg" loading="lazy" width="960" height="1280" alt="Gabinete de intemperie con medición"><figcaption><p>Gabinete de intemperie con medición</p><div class="tags"><span class="tag">Montajes</span><span class="tag">Automatización</span></div></figcaption></figure>
-        <figure data-tags="Tableros,Automatización"><img src="fotos/automatizacion-02.jpg" loading="lazy" width="1200" height="1600" alt="Borneras e instrumentación de control"><figcaption><p>Borneras e instrumentación de control</p><div class="tags"><span class="tag">Tableros</span><span class="tag">Automatización</span></div></figcaption></figure>
-        <figure data-tags="Montajes"><img src="fotos/planta-07.jpg" loading="lazy" width="960" height="1280" alt="Conexionado de tableros en playa de maniobras"><figcaption><p>Conexionado de tableros en playa de maniobras</p><div class="tags"><span class="tag">Montajes</span></div></figcaption></figure>
-      </div>
-      <p style="margin-top:2px;font-size:13px;color:var(--tenue)">Deslizá para ver más trabajos.</p>
     </div>
   </section>
 
-  <section class="banda" aria-label="Conexionado de tableros en playa de maniobras">
-    <img src="fotos/planta-07.jpg" loading="lazy" width="960" height="1280" alt="Playa de maniobras donde se realizó el conexionado de tableros">
+  <section class="banda" aria-label="Subestación transformadora Curupaytí, obra junto a VFM">
+    <img src="fotos/vfm-set-curupayti.jpg" loading="lazy" alt="Subestación transformadora 33/13,2 kV, obra realizada junto a VFM">
     <div class="cap"><div class="in">
       <div class="t">Trabajo en sitio</div>
-      <div class="d">Conexionado de tableros en playa de maniobras.</div>
+      <div class="d">VFM — S.E.T. 33/13,2 kV Curupaytí.</div>
     </div></div>
   </section>
 
@@ -554,35 +616,7 @@ footer img.f-logo{height:48px;width:auto}
     });
   });
 
-  // filtros de galería
-  var track = document.getElementById('track');
-  var figs = Array.prototype.slice.call(track.querySelectorAll('figure'));
-  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
   var rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  chips.forEach(function(c){
-    c.addEventListener('click', function(){
-      var f = c.getAttribute('data-f');
-      chips.forEach(function(x){ x.setAttribute('aria-pressed', x === c ? 'true' : 'false'); });
-      figs.forEach(function(fig){
-        var tags = fig.getAttribute('data-tags').split(',');
-        fig.style.display = (f === 'Todos' || tags.indexOf(f) !== -1) ? '' : 'none';
-      });
-      try { track.scrollTo({ left: 0, behavior: 'auto' }); } catch(e){ track.scrollLeft = 0; }
-      if(!rm){
-        track.style.transition = 'none'; track.style.opacity = '0';
-        requestAnimationFrame(function(){ track.style.transition = 'opacity .35s ease'; track.style.opacity = '1'; });
-      }
-    });
-  });
-
-  // flechas
-  function scrollTrack(dir){
-    var amt = Math.min(track.clientWidth * 0.85, 360);
-    track.scrollBy({ left: dir * amt, behavior: rm ? 'auto' : 'smooth' });
-  }
-  document.getElementById('prev').addEventListener('click', function(){ scrollTrack(-1); });
-  document.getElementById('next').addEventListener('click', function(){ scrollTrack(1); });
 
   // formulario -> WhatsApp
   document.getElementById('form-wa').addEventListener('submit', function(e){
@@ -623,7 +657,7 @@ footer img.f-logo{height:48px;width:auto}
     els.forEach(function(el){ el.classList.add('vis'); });
   }
 
-    // carrusel de historia
+  // carrusel de historia
   var histTrack = document.getElementById('histTrack');
   if(histTrack){
     var slides = Array.prototype.slice.call(histTrack.children);
@@ -656,29 +690,6 @@ footer img.f-logo{height:48px;width:auto}
 
     document.getElementById('histNext').addEventListener('click', function(){ next(); restart(); });
     document.getElementById('histPrev').addEventListener('click', function(){ prev(); restart(); });
-
-    // deslizar con el dedo en celular
-    var touchStartX = 0, touchStartY = 0, touchDeltaX = 0, isSwiping = false;
-    histTrack.addEventListener('touchstart', function(e){
-      touchStartX = e.touches[0].clientX;
-      touchStartY = e.touches[0].clientY;
-      touchDeltaX = 0;
-      isSwiping = true;
-      stop();
-    }, { passive: true });
-    histTrack.addEventListener('touchmove', function(e){
-      if(!isSwiping) return;
-      var dx = e.touches[0].clientX - touchStartX;
-      var dy = e.touches[0].clientY - touchStartY;
-      if(Math.abs(dx) > Math.abs(dy)){ touchDeltaX = dx; e.preventDefault(); }
-    }, { passive: false });
-    histTrack.addEventListener('touchend', function(){
-      if(!isSwiping) return;
-      isSwiping = false;
-      if(touchDeltaX > 40){ prev(); }
-      else if(touchDeltaX < -40){ next(); }
-      start();
-    });
 
     var carousel = histTrack.closest('.hist-carousel');
     if(window.matchMedia('(hover: hover) and (pointer: fine)').matches){
