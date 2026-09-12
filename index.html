@@ -359,6 +359,28 @@ footer img.f-logo{height:48px;width:auto}
           </div>
           <button class="hist-arrow prev" type="button" id="histPrev" aria-label="Foto anterior">‹</button>
           <button class="hist-arrow next" type="button" id="histNext" aria-label="Foto siguiente">›</button>
+          // deslizar con el dedo en celular
+          var touchStartX = 0, touchStartY = 0, touchDeltaX = 0, isSwiping = false;
+          histTrack.addEventListener('touchstart', function(e){
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            touchDeltaX = 0;
+            isSwiping = true;
+            stop();
+          }, { passive: true });
+          histTrack.addEventListener('touchmove', function(e){
+            if(!isSwiping) return;
+            var dx = e.touches[0].clientX - touchStartX;
+            var dy = e.touches[0].clientY - touchStartY;
+            if(Math.abs(dx) > Math.abs(dy)){ touchDeltaX = dx; e.preventDefault(); }
+          }, { passive: false });
+          histTrack.addEventListener('touchend', function(){
+            if(!isSwiping) return;
+            isSwiping = false;
+            if(touchDeltaX > 40){ prev(); }
+            else if(touchDeltaX < -40){ next(); }
+            start();
+          });
           <div class="hist-dots" id="histDots" role="tablist" aria-label="Seleccionar foto"></div>
         </div>
       </div>
