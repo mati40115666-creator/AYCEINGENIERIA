@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AyCE Ingeniería — Ingeniería eléctrica y automatización en Santa Fe</title>
+<meta name="description" content="Diseñamos, montamos y ponemos en marcha tableros eléctricos, instalaciones y sistemas de automatización industrial en la provincia de Santa Fe. 45 años de oficio, con las herramientas de hoy.">
+<link rel="canonical" href="https://ayceingenieria.com.ar/">
+<meta name="theme-color" content="#123D8D">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="AyCE Ingeniería">
+<meta property="og:title" content="AyCE Ingeniería — Ingeniería eléctrica y automatización en Santa Fe">
+<meta property="og:description" content="Tableros, instalaciones y automatización industrial en Santa Fe. 45 años de oficio, con las herramientas de hoy.">
+<meta property="og:url" content="https://ayceingenieria.com.ar/">
+<meta property="og:image" content="https://ayceingenieria.com.ar/fotos/chiller-04.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AyCE Ingeniería — Ingeniería eléctrica y automatización en Santa Fe">
+<meta name="twitter:description" content="Tableros, instalaciones y automatización industrial en Santa Fe.">
+<meta name="twitter:image" content="https://ayceingenieria.com.ar/fotos/chiller-04.jpg">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"AyCE Ingeniería","alternateName":"Accionamientos y Controles Eléctricos","description":"Ingeniería eléctrica, automatización y control industrial en la provincia de Santa Fe, Argentina. Tableros eléctricos y de automatización, instalaciones y montajes, puesta en marcha de sistemas de control.","url":"https://ayceingenieria.com.ar/","email":"ayce_ing@hotmail.com.ar","telephone":"+5493424782545","areaServed":{"@type":"State","name":"Santa Fe, Argentina"},"address":{"@type":"PostalAddress","addressRegion":"Santa Fe","addressCountry":"AR"},"sameAs":["https://www.linkedin.com/company/ayce-ingeniería"],"knowsAbout":["Tableros eléctricos","Tableros de automatización","Automatización industrial","PLC","Variadores de velocidad","Instalaciones eléctricas","Puesta en marcha","Instrumentación"]}</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --azul:#123D8D; --azul-osc:#0E2F6E; --azul-claro:#EDF2FB; --borde-azul:#C4D0E8;
+  --tinta:#16181D; --texto:#3c414a; --texto-2:#565b63; --tenue:#8a8f97;
+  --linea:#E6E9EE; --linea-2:#E8E8E8; --fondo-2:#F5F6F8;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'IBM Plex Sans',system-ui,-apple-system,sans-serif;color:var(--tinta);background:#fff;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{display:block;max-width:100%}
+a{color:var(--azul);text-decoration:none}
+a:hover{color:var(--azul-osc)}
+button{font-family:inherit}
+:focus-visible{outline:2px solid var(--azul);outline-offset:3px;border-radius:3px}
+::selection{background:var(--azul);color:#fff}
+ul,ol{list-style:none}
+
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
+section{scroll-margin-top:96px}
+@media(max-width:900px){section{scroll-margin-top:86px}}
+.pad{padding:clamp(64px,10vw,120px) 0}
+.gris{background:var(--fondo-2);border-top:1px solid #EDEFF2;border-bottom:1px solid #EDEFF2}
+.eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--azul);font-weight:700}
+h2{font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.1;letter-spacing:-.018em;font-weight:700;color:var(--tinta);margin:16px 0 0;text-wrap:balance}
+.lede{margin:18px 0 0;font-size:clamp(1rem,1.4vw,1.12rem);line-height:1.6;color:var(--texto-2);text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--azul);color:#fff;padding:14px 24px;border:none;border-radius:10px;font-weight:600;font-size:15px;cursor:pointer;transition:background .2s,transform .2s}
+.btn:hover{background:var(--azul-osc);color:#fff;transform:translateY(-2px)}
+.btn-2{background:#fff;color:var(--azul);border:1px solid var(--borde-azul)}
+.btn-2:hover{background:#F3F6FC;border-color:var(--azul);color:var(--azul);transform:none}
+
+/* banda deslizante de palabras clave */
+.ticker{background:var(--azul);overflow:hidden;position:relative}
+.ticker-track{display:flex;width:max-content;animation:tick 46s linear infinite}
+@media (hover:hover) and (pointer:fine){.ticker-track:hover{animation-play-state:paused}}
+.ticker-group{display:flex;align-items:center;flex:0 0 auto}
+.ticker-item{display:inline-flex;align-items:center;gap:20px;padding:15px 0;color:#fff;font-family:var(--mono);font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+.ticker-item::after{content:'';width:5px;height:5px;border-radius:50%;background:#7FA0DA;flex:0 0 auto}
+.ticker-item{padding-left:20px}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){
+  .ticker-track{animation:none}
+  .ticker{overflow-x:auto}
+}
+
+/* header */
+header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.9);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--linea-2)}
+.nav{height:80px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.nav .logo img{height:44px;width:auto}
+.nav-desk{display:flex;align-items:center;gap:26px}
+.nav-desk a.link{font-size:15px;color:var(--texto);font-weight:500;transition:color .18s}
+.nav-desk a.link:hover{color:var(--azul)}
+.nav-wa{background:var(--azul);color:#fff;padding:10px 18px;border-radius:8px;font-size:14px;font-weight:600;white-space:nowrap;transition:background .2s}
+.nav-wa:hover{background:var(--azul-osc);color:#fff}
+.burger{display:none;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid #E1E4E9;border-radius:9px;background:#fff;cursor:pointer}
+.menu-mob{display:none;border-top:1px solid var(--linea-2);background:#fff;padding:10px clamp(20px,5vw,48px) 22px}
+.menu-mob a{padding:14px 2px;font-size:16px;color:var(--tinta);font-weight:500;border-bottom:1px solid #F0F1F4;display:block}
+.menu-mob .btn{margin-top:16px;width:100%}
+@media(max-width:900px){
+  .nav-desk{display:none}
+  .burger{display:inline-flex}
+  .menu-mob.open{display:block}
+  .nav{height:70px}
+  .nav .logo img{height:38px}
+}
+
+/* hero */
+.hero{padding:clamp(52px,8vw,96px) 0 clamp(44px,5vw,64px)}
+.hero-top{max-width:1000px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,64px);align-items:center;margin-top:clamp(28px,3.5vw,44px)}
+.hero h1{font-size:clamp(2.2rem,5.4vw,3.7rem);line-height:1.06;letter-spacing:-.022em;font-weight:700;margin:18px 0 0;color:var(--tinta)}
+.hero .sub{margin:24px 0 0;font-size:clamp(1.05rem,1.6vw,1.28rem);line-height:1.6;color:#4a4f57;max-width:52ch;text-wrap:pretty}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:24px 20px;margin-top:clamp(40px,5vw,58px);padding-top:26px;border-top:1px solid #E3E6EB}
+.stats .n{font-size:clamp(1.5rem,2.4vw,1.9rem);font-weight:700;color:var(--azul);line-height:1}
+.stats .l{font-size:13px;color:#666;margin-top:5px}
+.hero-img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:10px;border:1px solid #E2E5EA;box-shadow:0 30px 60px -30px rgba(16,24,40,.35)}
+.hist-img{aspect-ratio:4/5}
+
+/* carrusel de historia */
+.hist-carousel{position:relative;aspect-ratio:4/5;border-radius:10px;overflow:hidden;border:1px solid #E2E5EA;box-shadow:0 30px 60px -30px rgba(16,24,40,.35);background:#EEF0F3}
+.hist-track{display:flex;width:100%;height:100%;transition:transform .55s cubic-bezier(.4,0,.2,1)}
+.hist-slide{flex:0 0 100%;height:100%;margin:0}
+.hist-slide img{width:100%;height:100%;object-fit:cover;display:block}
+.hist-arrow{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;border:none;background:rgba(10,16,32,.45);color:#fff;font-size:20px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:2}
+.hist-arrow:hover{background:rgba(10,16,32,.7)}
+.hist-arrow.prev{left:12px}
+.hist-arrow.next{right:12px}
+.hist-dots{position:absolute;left:0;right:0;bottom:14px;display:flex;justify-content:center;gap:8px;z-index:2}
+.hist-dots button{width:8px;height:8px;border-radius:50%;border:none;background:rgba(255,255,255,.55);padding:0;cursor:pointer;transition:background .2s,transform .2s}
+.hist-dots button[aria-selected="true"]{background:#fff;transform:scale(1.25)}
+@media(prefers-reduced-motion:reduce){.hist-track{transition:none}}
+
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}}
+
+/* servicios */
+.cards{margin-top:clamp(36px,5vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.card{border:1px solid var(--linea);border-radius:14px;padding:clamp(24px,3vw,32px);background:#fff;display:flex;flex-direction:column;gap:14px;box-shadow:0 1px 2px rgba(16,24,40,.04),0 10px 26px -20px rgba(16,24,40,.28);transition:border-color .25s,box-shadow .25s,transform .25s}
+.card:hover{border-color:var(--borde-azul);box-shadow:0 20px 40px -28px rgba(16,24,40,.3);transform:translateY(-4px)}
+.card .n{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--azul);letter-spacing:.05em}
+.card h3{font-size:1.24rem;line-height:1.25;font-weight:600;letter-spacing:-.01em}
+.card p{font-size:15px;line-height:1.55;color:var(--texto-2)}
+.card ul{display:flex;flex-direction:column;gap:11px;margin-top:4px}
+.card li{display:flex;gap:11px;align-items:flex-start;font-size:14.5px;color:#4a4f57;line-height:1.5}
+.dot{flex:0 0 auto;width:6px;height:6px;background:var(--azul);border-radius:1px;margin-top:8px}
+
+/* historia */
+.dos-col{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(32px,5vw,64px);align-items:center}
+.hist p:not(.eyebrow){margin:20px 0 0;font-size:1.05rem;line-height:1.65;color:#4a4f57;text-wrap:pretty}
+.pills{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.pill{background:#fff;border:1px solid #E3E6EB;border-radius:10px;padding:14px 18px}
+.pill .a{font-size:1.2rem;font-weight:700;color:var(--azul);line-height:1}
+.pill .b{font-size:12.5px;color:#666;margin-top:4px}
+blockquote{margin:clamp(40px,6vw,64px) 0 0;border-left:3px solid var(--azul);padding:6px 0 6px 26px;font-size:clamp(1.3rem,2.7vw,2rem);line-height:1.3;font-weight:500;letter-spacing:-.01em;max-width:900px;text-wrap:balance}
+
+/* galería */
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chip{border:1px solid #D5D9E0;background:#fff;color:var(--texto);padding:9px 18px;border-radius:999px;font-size:14px;font-weight:500;cursor:pointer;transition:background .18s,color .18s,border-color .18s}
+.chip:hover{border-color:var(--azul);color:var(--azul)}
+.chip[aria-pressed="true"]{background:var(--azul);color:#fff;border-color:var(--azul)}
+.arrows{display:flex;gap:8px}
+.arrow{width:44px;height:44px;border:1px solid #D5D9E0;background:#fff;border-radius:10px;cursor:pointer;font-size:20px;color:var(--tinta);display:flex;align-items:center;justify-content:center;transition:border-color .2s,color .2s}
+.arrow:hover{border-color:var(--azul);color:var(--azul)}
+.track{margin-top:22px;display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 18px;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:#c8cdd6 transparent;transition:opacity .3s ease}
+.track::-webkit-scrollbar{height:8px}
+.track::-webkit-scrollbar-track{background:transparent}
+.track::-webkit-scrollbar-thumb{background:#cdd2db;border-radius:8px}
+figure{flex:0 0 clamp(240px,74vw,318px);scroll-snap-align:start;background:#fff;border:1px solid var(--linea);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+figure img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;background:#EEF0F3}
+figcaption{padding:15px 16px 16px;display:flex;flex-direction:column;gap:11px;flex:1}
+figcaption p{font-size:14px;line-height:1.45;color:var(--texto);flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--azul);background:var(--azul-claro);border-radius:5px;padding:3px 8px}
+
+/* banda */
+.banda{position:relative;height:clamp(320px,50vw,660px);overflow:hidden;isolation:isolate}
+.banda img{width:100%;height:100%;object-fit:cover;object-position:center 42%}
+.banda::before,.banda::after{content:'';position:absolute;left:0;right:0;z-index:2;pointer-events:none}
+.banda::before{top:0;height:clamp(80px,13vw,150px);background:linear-gradient(to bottom,#fff 0%,rgba(255,255,255,.72) 38%,rgba(255,255,255,0) 100%)}
+.banda::after{bottom:0;height:clamp(80px,13vw,150px);background:linear-gradient(to top,var(--fondo-2) 0%,rgba(245,246,248,.72) 38%,rgba(245,246,248,0) 100%)}
+.banda .cap{position:absolute;inset:0;z-index:3;display:flex;align-items:center;background:linear-gradient(to right,rgba(7,16,38,.86) 0%,rgba(7,16,38,.62) 42%,rgba(7,16,38,.12) 72%,rgba(7,16,38,0) 100%)}
+.banda .cap .in{max-width:1200px;width:100%;margin:0 auto;padding:0 clamp(20px,5vw,48px);color:#fff}
+.banda .cap .t{font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#BFD0EE;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.banda .cap .d{margin-top:10px;font-size:clamp(1.15rem,2.4vw,1.7rem);font-weight:700;line-height:1.25;max-width:19ch;text-wrap:balance;text-shadow:0 2px 14px rgba(0,0,0,.55)}
+
+/* proceso */
+.pcards{margin-top:clamp(34px,5vw,52px);display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.pcard{background:#fff;border:1px solid var(--linea);border-radius:14px;padding:26px;display:flex;flex-direction:column;gap:10px}
+.pcard .n{font-family:var(--mono);font-size:13px;color:var(--azul);font-weight:700}
+.pcard h3{font-size:1.08rem;line-height:1.3;font-weight:600;letter-spacing:-.005em}
+.pcard p{font-size:14px;line-height:1.55;color:var(--texto-2)}
+
+/* experiencia */
+.form-list li{display:flex;gap:14px;align-items:flex-start;padding:18px 0;border-top:1px solid var(--linea);font-size:15.5px;line-height:1.55;color:var(--texto)}
+.form-list .dot{width:7px;height:7px}
+
+/* contacto */
+.contacto-grid{margin-top:clamp(32px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(24px,3vw,40px);align-items:start}
+form.caja,.datos{background:#fff;border:1px solid var(--linea);border-radius:16px;padding:clamp(24px,3vw,34px)}
+form.caja{display:flex;flex-direction:column;gap:18px}
+.campo{display:flex;flex-direction:column;gap:7px}
+label{font-size:13px;font-weight:600;color:var(--tinta)}
+label span{color:var(--tenue);font-weight:400}
+input,textarea{width:100%;padding:12px 14px;border:1px solid #D5DAE2;border-radius:9px;font-size:15px;color:var(--tinta);background:#fff;font-family:inherit;transition:border-color .18s,box-shadow .18s}
+textarea{resize:vertical;line-height:1.5}
+input:focus,textarea:focus{outline:none;border-color:var(--azul);box-shadow:0 0 0 3px rgba(18,61,141,.13)}
+.nota{font-size:12.5px;color:var(--tenue);line-height:1.5}
+.datos{display:flex;flex-direction:column;gap:22px}
+.dato-lab{font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue);margin-bottom:5px}
+.dato-val{font-size:15.5px;color:var(--tinta)}
+.dato-item{display:flex;gap:14px;align-items:flex-start}
+.dato-ico{flex:0 0 auto;width:38px;height:38px;border-radius:9px;background:var(--azul-claro);display:flex;align-items:center;justify-content:center;color:var(--azul)}
+
+/* footer */
+footer{background:var(--azul-osc);color:#fff;padding:clamp(48px,7vw,80px) 0 36px}
+.f-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;align-items:start}
+footer img.f-logo{height:48px;width:auto}
+.f-claim{margin-top:22px;font-size:1.05rem;line-height:1.4;font-weight:500;color:#EAEFF9;max-width:26ch;text-wrap:balance}
+.f-tit{font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#9DB2DC;margin-bottom:16px}
+.f-links{display:flex;flex-direction:column;gap:14px}
+.f-link{display:inline-flex;align-items:center;gap:11px;color:#EAEFF9;font-size:14.5px;transition:color .18s}
+.f-link:hover{color:#fff}
+.f-link svg{flex:0 0 auto;opacity:.85}
+.f-link:hover svg{opacity:1}
+.f-social{display:flex;gap:10px;margin-top:24px}
+.f-social a{width:42px;height:42px;border-radius:10px;border:1px solid rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;color:#fff;transition:background .2s,border-color .2s}
+.f-social a:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.45);color:#fff}
+.f-bottom{margin-top:clamp(36px,5vw,56px);padding-top:24px;border-top:1px solid rgba(255,255,255,.16);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:13px;color:#9DB2DC}
+
+/* reveal */
+[data-reveal]{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+[data-reveal].vis{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+  [data-reveal]{opacity:1!important;transform:none!important}
+  .track{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#inicio" aria-label="AyCE Ingeniería — inicio">
+      <img src="assets/logo-blue.png" alt="AyCE Ingeniería" width="1039" height="548">
+    </a>
+    <nav class="nav-desk" aria-label="Navegación principal">
+      <a class="link" href="#servicios">Servicios</a>
+      <a class="link" href="#historia">Historia</a>
+      <a class="link" href="#trabajos">Trabajos</a>
+      <a class="link" href="#proceso">Cómo trabajamos</a>
+      <a class="link" href="#experiencia">Experiencia</a>
+      <a class="link" href="#contacto">Contacto</a>
+      <a class="nav-wa" href="https://wa.me/5493424782545?text=Hola%2C%20quisiera%20consultar%20por%20un%20proyecto." target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+    <button class="burger" type="button" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-mob">
+      <svg width="22" height="16" viewBox="0 0 22 16" aria-hidden="true"><rect y="0" width="22" height="2" rx="1" fill="#16181D"/><rect y="7" width="22" height="2" rx="1" fill="#16181D"/><rect y="14" width="22" height="2" rx="1" fill="#16181D"/></svg>
+    </button>
+  </div>
+  <div class="menu-mob" id="menu-mob">
+    <nav aria-label="Navegación móvil">
+      <a href="#servicios">Servicios</a>
+      <a href="#historia">Historia</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#proceso">Cómo trabajamos</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#contacto">Contacto</a>
+      <a class="btn" href="https://wa.me/5493424782545?text=Hola%2C%20quisiera%20consultar%20por%20un%20proyecto." target="_blank" rel="noopener">Escribinos por WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-top" data-reveal>
+        <p class="eyebrow">Ingeniería eléctrica · Automatización · Control</p>
+        <h1>45 años de oficio.</h1>
+        <p class="sub">Diseñamos, montamos y ponemos en marcha tableros eléctricos, instalaciones y sistemas de automatización industrial en toda la provincia de Santa Fe.</p>
+        <div class="hero-ctas">
+          <a class="btn" href="https://wa.me/5493424782545?text=Hola%2C%20quisiera%20consultar%20por%20un%20proyecto." target="_blank" rel="noopener">Escribinos por WhatsApp <span aria-hidden="true">→</span></a>
+          <a class="btn btn-2" href="#trabajos">Ver trabajos</a>
+        </div>
+      </div>
+      <div class="stats" data-reveal>
+        <div><div class="n">1980</div><div class="l">Nuestros comienzos</div></div>
+        <div><div class="n">45+</div><div class="l">Años de trayectoria</div></div>
+        <div><div class="n">3</div><div class="l">Generaciones juntas</div></div>
+        <div><div class="n">Santa&nbsp;Fe</div><div class="l">Toda la provincia</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" role="marquee" aria-label="Especialidades de AyCE Ingeniería">
+    <div class="ticker-track"><div class="ticker-group"><span class="ticker-item">Tableros de comando y potencia</span><span class="ticker-item">Tableros de automatización</span><span class="ticker-item">Montajes eléctricos industriales</span><span class="ticker-item">Puesta en marcha</span><span class="ticker-item">Programación de PLC</span><span class="ticker-item">Variadores de velocidad</span><span class="ticker-item">Instrumentación</span><span class="ticker-item">Control industrial</span><span class="ticker-item">Documentación técnica</span><span class="ticker-item">Santa Fe · Argentina</span></div><div class="ticker-group" aria-hidden="true"><span class="ticker-item">Tableros de comando y potencia</span><span class="ticker-item">Tableros de automatización</span><span class="ticker-item">Montajes eléctricos industriales</span><span class="ticker-item">Puesta en marcha</span><span class="ticker-item">Programación de PLC</span><span class="ticker-item">Variadores de velocidad</span><span class="ticker-item">Instrumentación</span><span class="ticker-item">Control industrial</span><span class="ticker-item">Documentación técnica</span><span class="ticker-item">Santa Fe · Argentina</span></div></div>
+  </div>
+
+  <section id="servicios" class="pad">
+    <div class="wrap">
+      <div data-reveal style="max-width:720px">
+        <p class="eyebrow">01 — Qué hacemos</p>
+        <h2>Tres frentes de trabajo, un mismo criterio.</h2>
+        <p class="lede">Acompañamos el proceso completo: diseñamos y armamos el tablero, lo montamos en planta y lo ponemos en marcha.</p>
+      </div>
+      <div class="cards">
+        <article class="card" data-reveal>
+          <span class="n">01</span>
+          <h3>Tableros eléctricos y de automatización</h3>
+          <p>Diseño, armado y montaje de tableros de comando, control y potencia.</p>
+          <ul>
+            <li><span class="dot"></span><span>Tableros de comando y potencia</span></li>
+            <li><span class="dot"></span><span>Tableros de automatización y control</span></li>
+            <li><span class="dot"></span><span>Armado según el requerimiento de cada proyecto</span></li>
+            <li><span class="dot"></span><span>Documentación técnica del tablero</span></li>
+          </ul>
+        </article>
+        <article class="card" data-reveal>
+          <span class="n">02</span>
+          <h3>Instalaciones y montajes eléctricos</h3>
+          <p>Ejecución y conexionado de instalaciones eléctricas en planta.</p>
+          <ul>
+            <li><span class="dot"></span><span>Montajes eléctricos industriales</span></li>
+            <li><span class="dot"></span><span>Conexionado de tableros en sitio</span></li>
+            <li><span class="dot"></span><span>Tendidos e instalaciones comerciales</span></li>
+            <li><span class="dot"></span><span>Puesta en servicio</span></li>
+          </ul>
+        </article>
+        <article class="card" data-reveal>
+          <span class="n">03</span>
+          <h3>Automatización y control</h3>
+          <p>Integración y puesta en marcha de sistemas de control industrial.</p>
+          <ul>
+            <li><span class="dot"></span><span>Programación y puesta en marcha de PLC</span></li>
+            <li><span class="dot"></span><span>Variadores de velocidad</span></li>
+            <li><span class="dot"></span><span>Sensores, caudalímetros e instrumentación</span></li>
+            <li><span class="dot"></span><span>Automatización de bombas y procesos</span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="historia" class="pad gris">
+    <div class="wrap">
+      <div class="dos-col">
+        <div class="hist" data-reveal>
+          <p class="eyebrow">02 — Nuestra historia</p>
+          <h2>Un nombre con historia, una mirada nueva.</h2>
+          <p>El nombre AyCE —Accionamientos y Controles Eléctricos— acompaña proyectos de ingeniería eléctrica y automatización industrial desde alrededor de 1980. A lo largo de más de 45 años, esa trayectoria se construyó con trabajos realizados de forma independiente y junto a equipos y empresas amigas, en montajes, puestas en marcha e instalaciones de distinta complejidad.</p>
+          <p>Hoy trabajan tres generaciones juntas. A la experiencia acumulada durante décadas se suma una generación nueva de profesionales que incorpora herramientas, tecnologías e inteligencia artificial aplicadas a la práctica. El objetivo no cambió: hacer las cosas correctamente, priorizando la seguridad, la calidad y la confianza en cada proyecto.</p>
+          <div class="pills">
+            <div class="pill"><div class="a">1980</div><div class="b">Los comienzos</div></div>
+            <div class="pill"><div class="a">+45 años</div><div class="b">Trayectoria</div></div>
+            <div class="pill"><div class="a">Hoy</div><div class="b">Tres generaciones</div></div>
+          </div>
+        </div>
+        <div class="hist-carousel" data-reveal aria-roledescription="carrusel" aria-label="Fotos históricas de AyCE Ingeniería">
+          <div class="hist-track" id="histTrack">
+            <figure class="hist-slide"><img src="fotos_historia/historia-01.jpg" loading="lazy" alt="Sala de máquinas industrial con compresores y tableros, foto de archivo de AyCE Ingeniería"></figure>
+            <figure class="hist-slide"><img src="fotos_historia/historia-02.jpg" loading="lazy" alt="Detalle de compresor industrial con tablero de instrumentos, foto de archivo de AyCE Ingeniería"></figure>
+            <figure class="hist-slide"><img src="fotos_historia/historia-03.jpg" loading="lazy" alt="Puesta en marcha de un sistema con controlador y computadora, foto de archivo de AyCE Ingeniería"></figure>
+            <figure class="hist-slide"><img src="fotos_historia/historia-04.jpg" loading="lazy" alt="Programación de un sistema de control, foto de archivo de AyCE Ingeniería"></figure>
+            <figure class="hist-slide"><img src="fotos_historia/historia-05.jpg" loading="lazy" alt="Oficina de dibujo técnico con planos y equipo de trabajo, foto de archivo de AyCE Ingeniería"></figure>
+            <figure class="hist-slide"><img src="fotos_historia/historia-06.jpg" loading="lazy" alt="Trabajo en planta con computadora portátil, foto de archivo de AyCE Ingeniería"></figure>
+          </div>
+          <button class="hist-arrow prev" type="button" id="histPrev" aria-label="Foto anterior">‹</button>
+          <button class="hist-arrow next" type="button" id="histNext" aria-label="Foto siguiente">›</button>
+          <div class="hist-dots" id="histDots" role="tablist" aria-label="Seleccionar foto"></div>
+        </div>
+      </div>
+      <blockquote data-reveal>La mejor ingeniería no es la que se hace más rápido, sino la que se hace correctamente.</blockquote>
+    </div>
+  </section>
+
+  <section id="trabajos" class="pad" style="overflow:hidden">
+    <div class="wrap">
+      <div data-reveal style="max-width:760px">
+        <p class="eyebrow">03 — Trabajos realizados</p>
+        <h2>Trabajos realizados.</h2>
+        <p class="lede">Un mismo trabajo puede pertenecer a varias etiquetas: diseñamos y armamos el tablero, lo montamos en planta y lo ponemos en marcha. Filtrá por etiqueta para verlos.</p>
+      </div>
+      <div data-reveal style="margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
+        <div class="chips" role="group" aria-label="Filtrar trabajos por etiqueta">
+          <button class="chip" type="button" data-f="Todos" aria-pressed="true">Todos</button>
+          <button class="chip" type="button" data-f="Tableros" aria-pressed="false">Tableros</button>
+          <button class="chip" type="button" data-f="Montajes" aria-pressed="false">Montajes</button>
+          <button class="chip" type="button" data-f="Automatización" aria-pressed="false">Automatización</button>
+        </div>
+        <div class="arrows">
+          <button class="arrow" type="button" id="prev" aria-label="Ver trabajos anteriores">‹</button>
+          <button class="arrow" type="button" id="next" aria-label="Ver más trabajos">›</button>
+        </div>
+      </div>
+      <div class="track" id="track">
+        <figure data-tags="Tableros,Automatización"><img src="fotos/chiller-01.jpg" loading="lazy" width="1200" height="1600" alt="Interior de tablero de comando con control de temperatura y compresores"><figcaption><p>Interior de tablero de comando — control de temperatura y compresores</p><div class="tags"><span class="tag">Tableros</span><span class="tag">Automatización</span></div></figcaption></figure>
+        <figure data-tags="Tableros,Automatización"><img src="fotos/automatizacion-03.jpg" loading="lazy" width="900" height="1600" alt="Tablero con variadores de velocidad"><figcaption><p>Tablero con variadores de velocidad</p><div class="tags"><span class="tag">Tableros</span><span class="tag">Automatización</span></div></figcaption></figure>
+        <figure data-tags="Tableros,Montajes"><img src="fotos/planta-04.jpg" loading="lazy" width="924" height="1280" alt="Tablero de comando instalado"><figcaption><p>Tablero de comando instalado</p><div class="tags"><span class="tag">Tableros</span><span class="tag">Montajes</span></div></figcaption></figure>
+        <figure data-tags="Tableros,Automatización"><img src="fotos/chiller-04.jpg" loading="lazy" width="1200" height="1600" alt="Panel frontal de comando y señalización"><figcaption><p>Panel frontal de comando y señalización</p><div class="tags"><span class="tag">Tableros</span><span class="tag">Automatización</span></div></figcaption></figure>
+        <figure data-tags="Tableros,Montajes"><img src="fotos/planta-01.jpg" loading="lazy" width="960" height="1280" alt="Tablero de potencia, vista interior"><figcaption><p>Tablero de potencia — vista interior</p><div class="tags"><span class="tag">Tableros</span><span class="tag">Montajes</span></div></figcaption></figure>
+        <figure data-tags="Tableros,Automatización"><img src="fotos/automatizacion-01.jpg" loading="lazy" width="1200" height="1600" alt="Guardamotores y contactores"><figcaption><p>Guardamotores y contactores</p><div class="tags"><span class="tag">Tableros</span><span class="tag">Automatización</span></div></figcaption></figure>
+        <figure data-tags="Tableros,Automatización"><img src="fotos/chiller-03.jpg" loading="lazy" width="1200" height="1600" alt="Módulos de control e instrumentación"><figcaption><p>Módulos de control e instrumentación</p><div class="tags"><span class="tag">Tableros</span><span class="tag">Automatización</span></div></figcaption></figure>
+        <figure data-tags="Tableros,Montajes"><img src="fotos/planta-02.jpg" loading="lazy" width="960" height="1280" alt="Tablero de comando con módulos de control"><figcaption><p>Tablero de comando con módulos de control</p><div class="tags"><span class="tag">Tableros</span><span class="tag">Montajes</span></div></figcaption></figure>
+        <figure data-tags="Tableros,Automatización"><img src="fotos/automatizacion-04.jpg" loading="lazy" width="1200" height="1600" alt="Panel frontal con botonera de comando"><figcaption><p>Panel frontal — botonera de comando</p><div class="tags"><span class="tag">Tableros</span><span class="tag">Automatización</span></div></figcaption></figure>
+        <figure data-tags="Tableros,Montajes"><img src="fotos/planta-06.jpg" loading="lazy" width="942" height="1280" alt="Tablero de conexionado con cableado identificado"><figcaption><p>Tablero de conexionado — cableado identificado</p><div class="tags"><span class="tag">Tableros</span><span class="tag">Montajes</span></div></figcaption></figure>
+        <figure data-tags="Tableros"><img src="fotos/chiller-02.jpg" loading="lazy" width="1200" height="1600" alt="Borneras y cableado identificado"><figcaption><p>Borneras y cableado identificado</p><div class="tags"><span class="tag">Tableros</span></div></figcaption></figure>
+        <figure data-tags="Tableros,Automatización"><img src="fotos/automatizacion-05.jpg" loading="lazy" width="1200" height="1600" alt="Arrancadores suaves y protecciones"><figcaption><p>Arrancadores suaves y protecciones</p><div class="tags"><span class="tag">Tableros</span><span class="tag">Automatización</span></div></figcaption></figure>
+        <figure data-tags="Montajes,Automatización"><img src="fotos/planta-03.jpg" loading="lazy" width="960" height="1280" alt="Instrumentación montada en planta"><figcaption><p>Instrumentación montada en planta</p><div class="tags"><span class="tag">Montajes</span><span class="tag">Automatización</span></div></figcaption></figure>
+        <figure data-tags="Montajes,Automatización"><img src="fotos/planta-05.jpg" loading="lazy" width="960" height="1280" alt="Gabinete de intemperie con medición"><figcaption><p>Gabinete de intemperie con medición</p><div class="tags"><span class="tag">Montajes</span><span class="tag">Automatización</span></div></figcaption></figure>
+        <figure data-tags="Tableros,Automatización"><img src="fotos/automatizacion-02.jpg" loading="lazy" width="1200" height="1600" alt="Borneras e instrumentación de control"><figcaption><p>Borneras e instrumentación de control</p><div class="tags"><span class="tag">Tableros</span><span class="tag">Automatización</span></div></figcaption></figure>
+        <figure data-tags="Montajes"><img src="fotos/planta-07.jpg" loading="lazy" width="960" height="1280" alt="Conexionado de tableros en playa de maniobras"><figcaption><p>Conexionado de tableros en playa de maniobras</p><div class="tags"><span class="tag">Montajes</span></div></figcaption></figure>
+      </div>
+      <p style="margin-top:2px;font-size:13px;color:var(--tenue)">Deslizá para ver más trabajos.</p>
+    </div>
+  </section>
+
+  <section class="banda" aria-label="Conexionado de tableros en playa de maniobras">
+    <img src="fotos/planta-07.jpg" loading="lazy" width="960" height="1280" alt="Playa de maniobras donde se realizó el conexionado de tableros">
+    <div class="cap"><div class="in">
+      <div class="t">Trabajo en sitio</div>
+      <div class="d">Conexionado de tableros en playa de maniobras.</div>
+    </div></div>
+  </section>
+
+  <section id="proceso" class="pad gris">
+    <div class="wrap">
+      <div data-reveal style="max-width:720px">
+        <p class="eyebrow">04 — Cómo trabajamos</p>
+        <h2>Cuatro principios, un proceso ordenado.</h2>
+        <p class="lede">Trabajamos con una mirada tranquila y ordenada. Escuchamos, analizamos y explicamos las alternativas para que cada cliente decida qué le conviene.</p>
+      </div>
+      <div class="pcards">
+        <div class="pcard" data-reveal><span class="n">01</span><h3>Escuchamos antes de proponer</h3><p>Entendemos el problema y su contexto antes de sugerir una solución.</p></div>
+        <div class="pcard" data-reveal><span class="n">02</span><h3>Explicamos antes de convencer</h3><p>Presentamos las alternativas con sus ventajas para que la decisión sea tuya.</p></div>
+        <div class="pcard" data-reveal><span class="n">03</span><h3>Cada proyecto es un compromiso</h3><p>Lo asumimos como propio y acompañamos hasta su correcta finalización.</p></div>
+        <div class="pcard" data-reveal><span class="n">04</span><h3>La seguridad nunca se negocia</h3><p>No comprometemos la seguridad de las personas por un beneficio económico.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experiencia" class="pad">
+    <div class="wrap dos-col" style="align-items:start">
+      <div data-reveal>
+        <p class="eyebrow">05 — Experiencia y formación</p>
+        <h2>Experiencia y formación.</h2>
+        <p class="lede" style="max-width:32ch">Conocimiento técnico y práctico, sostenido por una formación que se mantiene al día.</p>
+      </div>
+      <div data-reveal>
+        <ul class="form-list">
+          <li><span class="dot"></span><span>Diseño, planimetría y documentación técnica para instalaciones eléctricas y sistemas de automatización.</span></li>
+          <li><span class="dot"></span><span>Experiencia en montajes eléctricos industriales, puesta en marcha, automatización e instrumentación.</span></li>
+          <li><span class="dot"></span><span>Equipo técnico multidisciplinario, con competencias complementarias en electricidad, automatización y mecatrónica.</span></li>
+          <li><span class="dot"></span><span>Formación continua y aplicación de herramientas digitales e inteligencia artificial a la práctica profesional.</span></li>
+          <li><span class="dot"></span><span>Inglés técnico avanzado para la interpretación de documentación y la comunicación con proveedores internacionales.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="pad gris" style="border-bottom:none">
+    <div class="wrap">
+      <div data-reveal style="max-width:720px">
+        <p class="eyebrow">06 — Contacto</p>
+        <h2>Conversemos sobre tu proyecto.</h2>
+        <p class="lede">Contanos qué necesitás y coordinamos una conversación. Escuchamos antes de proponer.</p>
+      </div>
+      <div class="contacto-grid">
+        <form class="caja" data-reveal id="form-wa">
+          <div class="campo">
+            <label for="f-nombre">Nombre</label>
+            <input id="f-nombre" name="nombre" type="text" required autocomplete="name">
+          </div>
+          <div class="campo">
+            <label for="f-empresa">Empresa <span>(opcional)</span></label>
+            <input id="f-empresa" name="empresa" type="text" autocomplete="organization">
+          </div>
+          <div class="campo">
+            <label for="f-necesita">¿Qué necesitás?</label>
+            <textarea id="f-necesita" name="necesita" rows="4" required></textarea>
+          </div>
+          <button class="btn" type="submit">Enviar por WhatsApp <span aria-hidden="true">→</span></button>
+          <p class="nota">Al enviar se abre WhatsApp con tu mensaje listo. También podés escribirnos por mail.</p>
+        </form>
+        <div class="datos" data-reveal>
+          <div class="dato-item">
+            <span class="dato-ico" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 004.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm0 18.02h-.01a8.2 8.2 0 01-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.16 8.16 0 01-1.25-4.35c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 012.41 5.83c0 4.54-3.7 8.2-8.26 8.2z"/></svg></span>
+            <div><div class="dato-lab">WhatsApp</div><a class="dato-val" style="color:var(--azul);font-weight:500" href="https://wa.me/5493424782545?text=Hola%2C%20quisiera%20consultar%20por%20un%20proyecto." target="_blank" rel="noopener">+54 9 342 478-2545</a></div>
+          </div>
+          <div class="dato-item">
+            <span class="dato-ico" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6l9 6.5L21 6"/></svg></span>
+            <div><div class="dato-lab">Mail</div><a class="dato-val" style="color:var(--azul);font-weight:500;word-break:break-all" href="mailto:ayce_ing@hotmail.com.ar">ayce_ing@hotmail.com.ar</a></div>
+          </div>
+          <div class="dato-item">
+            <span class="dato-ico" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-5.5 7-11a7 7 0 10-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+            <div><div class="dato-lab">Ubicación</div><div class="dato-val">Santa Fe, Argentina</div></div>
+          </div>
+          <div class="dato-item">
+            <span class="dato-ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM3 21h4V9H3v12zM10 21h4v-6.4c0-1.7.32-3.35 2.43-3.35 2.08 0 2.11 1.95 2.11 3.46V21h4v-7.1c0-3.47-.75-6.14-4.8-6.14-1.95 0-3.26 1.07-3.8 2.08h-.05V8H10v13z"/></svg></span>
+            <div><div class="dato-lab">LinkedIn</div><a class="dato-val" style="color:var(--azul);font-weight:500" href="https://www.linkedin.com/company/ayce-ingeniería" target="_blank" rel="noopener">AyCE Ingeniería</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <img class="f-logo" src="assets/logo-white.png" alt="AyCE Ingeniería" width="1039" height="548">
+        <p class="f-claim">Las herramientas cambian. Los principios permanecen.</p>
+        <div class="f-social">
+          <a href="https://wa.me/5493424782545?text=Hola%2C%20quisiera%20consultar%20por%20un%20proyecto." target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 004.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm0 18.02h-.01a8.2 8.2 0 01-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.16 8.16 0 01-1.25-4.35c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 012.41 5.83c0 4.54-3.7 8.2-8.26 8.2z"/></svg></a>
+          <a href="https://www.linkedin.com/company/ayce-ingeniería" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM3 21h4V9H3v12zM10 21h4v-6.4c0-1.7.32-3.35 2.43-3.35 2.08 0 2.11 1.95 2.11 3.46V21h4v-7.1c0-3.47-.75-6.14-4.8-6.14-1.95 0-3.26 1.07-3.8 2.08h-.05V8H10v13z"/></svg></a>
+          <a href="mailto:ayce_ing@hotmail.com.ar" aria-label="Enviar mail"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6l9 6.5L21 6"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="f-tit">Contacto</div>
+        <div class="f-links">
+          <a class="f-link" href="https://wa.me/5493424782545?text=Hola%2C%20quisiera%20consultar%20por%20un%20proyecto." target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 004.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm0 18.02h-.01a8.2 8.2 0 01-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.16 8.16 0 01-1.25-4.35c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 012.41 5.83c0 4.54-3.7 8.2-8.26 8.2z"/></svg>+54 9 342 478-2545</a>
+          <a class="f-link" href="mailto:ayce_ing@hotmail.com.ar"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6l9 6.5L21 6"/></svg>ayce_ing@hotmail.com.ar</a>
+          <a class="f-link" href="https://www.linkedin.com/company/ayce-ingeniería" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM3 21h4V9H3v12zM10 21h4v-6.4c0-1.7.32-3.35 2.43-3.35 2.08 0 2.11 1.95 2.11 3.46V21h4v-7.1c0-3.47-.75-6.14-4.8-6.14-1.95 0-3.26 1.07-3.8 2.08h-.05V8H10v13z"/></svg>AyCE Ingeniería</a>
+        </div>
+      </div>
+      <div>
+        <div class="f-tit">Dónde trabajamos</div>
+        <div class="f-links">
+          <span class="f-link"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-5.5 7-11a7 7 0 10-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Provincia de Santa Fe</span>
+          <span class="f-link" style="padding-left:28px">Argentina</span>
+        </div>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© <span id="year">2026</span> AyCE Ingeniería — Accionamientos y Controles Eléctricos.</span>
+      <span>Santa Fe · Argentina</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var WA = '5493424782545';
+
+  // año
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // menú móvil
+  var burger = document.getElementById('burger'), menu = document.getElementById('menu-mob');
+  burger.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      menu.classList.remove('open');
+      burger.setAttribute('aria-expanded','false');
+    });
+  });
+
+  // filtros de galería
+  var track = document.getElementById('track');
+  var figs = Array.prototype.slice.call(track.querySelectorAll('figure'));
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  chips.forEach(function(c){
+    c.addEventListener('click', function(){
+      var f = c.getAttribute('data-f');
+      chips.forEach(function(x){ x.setAttribute('aria-pressed', x === c ? 'true' : 'false'); });
+      figs.forEach(function(fig){
+        var tags = fig.getAttribute('data-tags').split(',');
+        fig.style.display = (f === 'Todos' || tags.indexOf(f) !== -1) ? '' : 'none';
+      });
+      try { track.scrollTo({ left: 0, behavior: 'auto' }); } catch(e){ track.scrollLeft = 0; }
+      if(!rm){
+        track.style.transition = 'none'; track.style.opacity = '0';
+        requestAnimationFrame(function(){ track.style.transition = 'opacity .35s ease'; track.style.opacity = '1'; });
+      }
+    });
+  });
+
+  // flechas
+  function scrollTrack(dir){
+    var amt = Math.min(track.clientWidth * 0.85, 360);
+    track.scrollBy({ left: dir * amt, behavior: rm ? 'auto' : 'smooth' });
+  }
+  document.getElementById('prev').addEventListener('click', function(){ scrollTrack(-1); });
+  document.getElementById('next').addEventListener('click', function(){ scrollTrack(1); });
+
+  // formulario -> WhatsApp
+  document.getElementById('form-wa').addEventListener('submit', function(e){
+    e.preventDefault();
+    var n = document.getElementById('f-nombre').value.trim();
+    var emp = document.getElementById('f-empresa').value.trim();
+    var q = document.getElementById('f-necesita').value.trim();
+    var msg = 'Hola, soy ' + n + (emp ? ' de ' + emp : '') + '.\n\n' + q;
+    window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+  });
+
+  // desplazamiento suave en enlaces internos (respeta la preferencia de movimiento reducido)
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(ev){
+      var id = a.getAttribute('href');
+      if(id === '#' || id.length < 2) return;
+      var target = document.querySelector(id);
+      if(!target) return;
+      ev.preventDefault();
+      var header = document.querySelector('header');
+      var offset = (header ? header.offsetHeight : 80) + 16;
+      var y = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: y, behavior: rm ? 'auto' : 'smooth' });
+      if(history.replaceState) history.replaceState(null, '', id);
+    });
+  });
+
+  // reveal al hacer scroll
+  var els = document.querySelectorAll('[data-reveal]');
+  if('IntersectionObserver' in window && !rm){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('vis'); io.unobserve(en.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+    els.forEach(function(el){ io.observe(el); });
+  } else {
+    els.forEach(function(el){ el.classList.add('vis'); });
+  }
+
+  // carrusel de historia
+  var histTrack = document.getElementById('histTrack');
+  if(histTrack){
+    var slides = Array.prototype.slice.call(histTrack.children);
+    var dotsWrap = document.getElementById('histDots');
+    var current = 0;
+    var AUTOPLAY_MS = 4500;
+    var timer = null;
+
+    slides.forEach(function(_, i){
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.role = 'tab';
+      b.setAttribute('aria-label', 'Ir a la foto ' + (i + 1));
+      b.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+      b.addEventListener('click', function(){ goTo(i); restart(); });
+      dotsWrap.appendChild(b);
+    });
+    var dots = Array.prototype.slice.call(dotsWrap.children);
+
+    function render(){
+      histTrack.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dots.forEach(function(d, i){ d.setAttribute('aria-selected', i === current ? 'true' : 'false'); });
+    }
+    function goTo(i){ current = (i + slides.length) % slides.length; render(); }
+    function next(){ goTo(current + 1); }
+    function prev(){ goTo(current - 1); }
+    function stop(){ if(timer){ clearInterval(timer); timer = null; } }
+    function start(){ if(!rm){ stop(); timer = setInterval(next, AUTOPLAY_MS); } }
+    function restart(){ stop(); start(); }
+
+    document.getElementById('histNext').addEventListener('click', function(){ next(); restart(); });
+    document.getElementById('histPrev').addEventListener('click', function(){ prev(); restart(); });
+
+    var carousel = histTrack.closest('.hist-carousel');
+    if(window.matchMedia('(hover: hover) and (pointer: fine)').matches){
+      carousel.addEventListener('mouseenter', stop);
+      carousel.addEventListener('mouseleave', start);
+    }
+
+    render();
+    start();
+  }
+})();
+</script>
+
+</body>
+</html>
