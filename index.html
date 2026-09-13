@@ -196,6 +196,29 @@ figcaption p{font-size:14px;line-height:1.45;color:var(--texto);flex:1}
 .flip-back p{margin-top:12px;font-size:14px;line-height:1.55;color:#DCE5F7}
 @media(max-width:860px){.flip-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.flip-grid{grid-template-columns:1fr}.flip-card{aspect-ratio:16/11}}
+
+/* tarjeta VFM: sin giro, abre galería */
+button.flip-card{display:block;width:100%;margin:0;padding:0;border:0;background:transparent;font:inherit;color:inherit;cursor:pointer;text-align:left;-webkit-appearance:none;appearance:none}
+.vfm-card .flip-inner{display:block}
+.vfm-card:hover .flip-inner,.vfm-card:focus-within .flip-inner{transform:none}
+.vfm-card:hover img{transform:scale(1.035)}
+.flip-front img{transition:transform .5s ease}
+.vfm-caption{position:absolute;left:0;right:0;bottom:0;padding:16px 18px;background:linear-gradient(to top,rgba(8,14,30,.88),rgba(8,14,30,0));display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.vfm-title{color:#fff;font-weight:700;font-size:.98rem;line-height:1.3}
+.vfm-cta{color:#BFEBD9;font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.03em;white-space:nowrap}
+
+/* ventana modal de la galería VFM */
+.vfm-modal{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:clamp(16px,4vw,40px);background:rgba(6,10,22,.78);backdrop-filter:blur(3px)}
+.vfm-modal[hidden]{display:none}
+.vfm-modal-box{background:#fff;border-radius:14px;max-width:980px;width:100%;max-height:90vh;overflow-y:auto;position:relative;padding:clamp(20px,4vw,36px)}
+.vfm-modal-close{position:absolute;top:14px;right:14px;width:38px;height:38px;border-radius:50%;border:1px solid var(--linea);background:#fff;color:var(--tinta);font-size:20px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.vfm-modal-close:hover{background:var(--fondo-2)}
+.vfm-modal-box h3{font-size:clamp(1.1rem,2vw,1.4rem);font-weight:700;letter-spacing:-.01em;padding-right:40px}
+.vfm-modal-box p{margin-top:10px;color:var(--texto-2);font-size:15px;line-height:1.55;max-width:70ch}
+.vfm-gallery{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.vfm-gallery img{width:100%;height:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px;display:block}
+@media(max-width:640px){.vfm-gallery{grid-template-columns:repeat(2,1fr)}}
+@media(prefers-reduced-motion:reduce){.flip-front img{transition:none}.vfm-card:hover img{transform:none}}
 @media(prefers-reduced-motion:reduce){
   .flip-card{aspect-ratio:auto;perspective:none}
   .flip-inner{position:static;transition:none;transform:none!important}
@@ -412,17 +435,17 @@ footer img.f-logo{height:48px;width:auto}
         <p class="lede">Una selección de trabajos junto a distintas empresas. Pasá el cursor sobre cada imagen para ver de qué se trata.</p>
       </div>
       <div class="flip-grid">
-        <div class="flip-card" data-reveal tabindex="0">
-          <div class="flip-inner">
-            <div class="flip-front">
+        <button class="flip-card vfm-card" type="button" data-reveal aria-haspopup="dialog" aria-controls="vfm-modal" id="vfm-open">
+          <span class="flip-inner">
+            <span class="flip-front">
               <img src="fotos/vfm-set-curupayti.jpg" loading="lazy" alt="Subestación transformadora 33/13,2 kV Curupaytí, obra junto a VFM">
-            </div>
-            <div class="flip-back">
-              <h3>VFM — S.E.T. 33/13,2 kV Curupaytí</h3>
-              <p>Trabajamos junto a VFM en el armado, conexionado y puesta en marcha de tableros de comando, medición y protección, y de servicios auxiliares.</p>
-            </div>
-          </div>
-        </div>
+              <span class="vfm-caption">
+                <span class="vfm-title">VFM — S.E.T. 33/13,2 kV Curupaytí</span>
+                <span class="vfm-cta">Ver galería del proyecto <span aria-hidden="true">→</span></span>
+              </span>
+            </span>
+          </span>
+        </button>
         <div class="flip-card" data-reveal tabindex="0">
           <div class="flip-inner">
             <div class="flip-front">
@@ -481,6 +504,22 @@ footer img.f-logo{height:48px;width:auto}
         </div>
     </div>
   </section>
+
+  <div class="vfm-modal" id="vfm-modal" role="dialog" aria-modal="true" aria-labelledby="vfm-modal-title" hidden>
+    <div class="vfm-modal-box">
+      <button type="button" class="vfm-modal-close" id="vfm-close" aria-label="Cerrar">✕</button>
+      <h3 id="vfm-modal-title">VFM — S.E.T. 33/13,2 kV Curupaytí</h3>
+      <p>Trabajamos junto a VFM en el armado, conexionado y puesta en marcha de tableros de comando, medición y protección, y de servicios auxiliares.</p>
+      <div class="vfm-gallery">
+        <img src="fotos_vfm/planta-01.jpg" loading="lazy" alt="Tablero armado para el proyecto VFM, foto 1">
+        <img src="fotos_vfm/planta-02.jpg" loading="lazy" alt="Tablero armado para el proyecto VFM, foto 2">
+        <img src="fotos_vfm/planta-03.jpg" loading="lazy" alt="Instrumentación del proyecto VFM">
+        <img src="fotos_vfm/planta-04.jpg" loading="lazy" alt="Tablero instalado en planta, proyecto VFM">
+        <img src="fotos_vfm/planta-05.jpg" loading="lazy" alt="Gabinete de intemperie, proyecto VFM">
+        <img src="fotos_vfm/planta-06.jpg" loading="lazy" alt="Conexionado de tablero, proyecto VFM">
+      </div>
+    </div>
+  </div>
 
   <div class="foto-ticker" role="marquee" aria-label="Fotos de tableros en obra">
     <div class="foto-ticker-track">
@@ -659,6 +698,29 @@ footer img.f-logo{height:48px;width:auto}
   });
 
   var rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // galería VFM
+  var vfmOpenBtn = document.getElementById('vfm-open');
+  var vfmModal = document.getElementById('vfm-modal');
+  if(vfmOpenBtn && vfmModal){
+    var vfmCloseBtn = document.getElementById('vfm-close');
+    function vfmOpen(){
+      vfmModal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      vfmCloseBtn.focus();
+    }
+    function vfmClose(){
+      vfmModal.hidden = true;
+      document.body.style.overflow = '';
+      vfmOpenBtn.focus();
+    }
+    vfmOpenBtn.addEventListener('click', vfmOpen);
+    vfmCloseBtn.addEventListener('click', vfmClose);
+    vfmModal.addEventListener('click', function(e){ if(e.target === vfmModal) vfmClose(); });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && !vfmModal.hidden) vfmClose();
+    });
+  }
 
   // formulario -> WhatsApp
   document.getElementById('form-wa').addEventListener('submit', function(e){
