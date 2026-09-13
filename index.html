@@ -72,6 +72,19 @@ h2{font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.1;letter-spacing:-.018em;f
 .ticker-item::after{content:'';width:5px;height:5px;border-radius:50%;background:#7FA0DA;flex:0 0 auto}
 .ticker-item{padding-left:20px}
 @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* cinta de fotos en obra */
+.foto-ticker{background:#0B1220;overflow:hidden}
+.foto-ticker-track{display:flex;width:max-content;animation:tickimg 78s linear infinite}
+@media (hover:hover) and (pointer:fine){.foto-ticker-track:hover{animation-play-state:paused}}
+.foto-ticker-group{display:flex;align-items:center;flex:0 0 auto}
+.foto-ticker-item{height:clamp(160px,22vw,260px);flex:0 0 auto;margin-right:4px}
+.foto-ticker-item img{height:100%;width:auto;display:block;object-fit:cover}
+@keyframes tickimg{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){
+  .foto-ticker-track{animation:none}
+  .foto-ticker{overflow-x:auto}
+}
 @media(prefers-reduced-motion:reduce){
   .ticker-track{animation:none}
   .ticker{overflow-x:auto}
@@ -466,13 +479,42 @@ footer img.f-logo{height:48px;width:auto}
     </div>
   </section>
 
-  <section class="banda" aria-label="Subestación transformadora Curupaytí, obra junto a VFM">
-    <img src="fotos/vfm-set-curupayti.jpg" loading="lazy" alt="Subestación transformadora 33/13,2 kV, obra realizada junto a VFM">
-    <div class="cap"><div class="in">
-      <div class="t">Trabajo en sitio</div>
-      <div class="d">VFM — S.E.T. 33/13,2 kV Curupaytí.</div>
-    </div></div>
-  </section>
+  <div class="foto-ticker" role="marquee" aria-label="Fotos de tableros en obra">
+    <div class="foto-ticker-track">
+      <div class="foto-ticker-group">
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-01.jpg" loading="lazy" alt="Tablero eléctrico en obra"></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-02.jpg" loading="lazy" alt="Tablero eléctrico en obra"></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-03.jpg" loading="lazy" alt="Tablero eléctrico en obra"></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-04.jpg" loading="lazy" alt="Tablero eléctrico en obra"></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-05.jpg" loading="lazy" alt="Tablero eléctrico en obra"></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-06.jpg" loading="lazy" alt="Tablero eléctrico en obra"></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-07.jpg" loading="lazy" alt="Tablero eléctrico en obra"></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-08.jpg" loading="lazy" alt="Tablero eléctrico en obra"></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-09.jpg" loading="lazy" alt="Tablero eléctrico en obra"></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-10.jpg" loading="lazy" alt="Tablero eléctrico en obra"></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-11.jpg" loading="lazy" alt="Tablero eléctrico en obra"></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-12.jpg" loading="lazy" alt="Tablero eléctrico en obra"></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-13.jpg" loading="lazy" alt="Tablero eléctrico en obra"></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-14.jpg" loading="lazy" alt="Tablero eléctrico en obra"></div>
+      </div>
+      <div class="foto-ticker-group" aria-hidden="true">
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-01.jpg" loading="lazy" alt=""></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-02.jpg" loading="lazy" alt=""></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-03.jpg" loading="lazy" alt=""></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-04.jpg" loading="lazy" alt=""></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-05.jpg" loading="lazy" alt=""></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-06.jpg" loading="lazy" alt=""></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-07.jpg" loading="lazy" alt=""></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-08.jpg" loading="lazy" alt=""></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-09.jpg" loading="lazy" alt=""></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-10.jpg" loading="lazy" alt=""></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-11.jpg" loading="lazy" alt=""></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-12.jpg" loading="lazy" alt=""></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-13.jpg" loading="lazy" alt=""></div>
+        <div class="foto-ticker-item"><img src="fotos_ticker/ticker-14.jpg" loading="lazy" alt=""></div>
+      </div>
+    </div>
+  </div>
 
   <section id="proceso" class="pad gris">
     <div class="wrap">
