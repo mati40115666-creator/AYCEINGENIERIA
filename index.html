@@ -74,7 +74,10 @@ h2{font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.1;letter-spacing:-.018em;f
 @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* cinta de fotos en obra */
-.foto-ticker{background:#0B1220;overflow:hidden}
+.foto-ticker{background:#fff;overflow:hidden;position:relative;isolation:isolate}
+.foto-ticker::before,.foto-ticker::after{content:'';position:absolute;top:0;bottom:0;width:clamp(50px,9vw,130px);z-index:2;pointer-events:none}
+.foto-ticker::before{left:0;background:linear-gradient(to right,#fff 0%,rgba(255,255,255,.7) 45%,rgba(255,255,255,0) 100%)}
+.foto-ticker::after{right:0;background:linear-gradient(to left,#fff 0%,rgba(255,255,255,.7) 45%,rgba(255,255,255,0) 100%)}
 .foto-ticker-track{display:flex;width:max-content;animation:tickimg 78s linear infinite}
 @media (hover:hover) and (pointer:fine){.foto-ticker-track:hover{animation-play-state:paused}}
 .foto-ticker-group{display:flex;align-items:center;flex:0 0 auto}
